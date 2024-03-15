@@ -18,13 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIk-GV-7Y2">
-                                <rect key="frame" x="120" y="658" width="150" height="70"/>
+                                <rect key="frame" x="208" y="658" width="150" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="bb4-hn-g3C"/>
                                     <constraint firstAttribute="height" constant="70" id="rW9-jb-qxc"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="35"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.56022877179609043" green="1" blue="0.51778941520624566" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G2c-cS-d5q"/>
                                 </connections>
@@ -35,21 +39,53 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUS-uJ-vN6">
+                                <rect key="frame" x="35" y="658" width="150" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="CIq-uE-9UV"/>
+                                    <constraint firstAttribute="width" secondItem="HUS-uJ-vN6" secondAttribute="height" multiplier="15:7" id="ME3-8F-5tm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="-">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="45"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.97918009020618557" green="0.46682433503540544" blue="0.45127633897655595" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="minusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cE-iP-f8B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1er-0o-KbP">
+                                <rect key="frame" x="150" y="753" width="93" height="35"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="filled" title="  Reset"/>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C0Z-LG-Cyl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tIk-GV-7Y2" secondAttribute="trailing" constant="35" id="5xd-ej-kbl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7V0-vh-Cm6" secondAttribute="trailing" constant="178.33333333333334" id="A4J-DD-7oA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1er-0o-KbP" secondAttribute="bottom" constant="30" id="EzB-HJ-hJA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1er-0o-KbP" secondAttribute="trailing" constant="150" id="G8p-Zd-OoE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tIk-GV-7Y2" secondAttribute="bottom" constant="90" id="Hvd-J1-iTU"/>
+                            <constraint firstItem="1er-0o-KbP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="PQy-jT-dIb"/>
                             <constraint firstItem="7V0-vh-Cm6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XJc-Xl-XGk"/>
+                            <constraint firstItem="HUS-uJ-vN6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="YSe-wB-6rq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HUS-uJ-vN6" secondAttribute="bottom" constant="90" id="aI6-nF-I5p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tIk-GV-7Y2" secondAttribute="trailing" symbolic="YES" id="qvg-6N-wKh"/>
-                            <constraint firstItem="tIk-GV-7Y2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="uFh-iz-YyE"/>
+                            <constraint firstItem="tIk-GV-7Y2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HUS-uJ-vN6" secondAttribute="trailing" constant="8" symbolic="YES" id="w5K-5r-BWE"/>
                             <constraint firstItem="7V0-vh-Cm6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="wGp-4g-Ylz"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="counterButton" destination="tIk-GV-7Y2" id="2ck-60-anI"/>
                         <outlet property="counterLabel" destination="7V0-vh-Cm6" id="4d1-Dh-MKy"/>
+                        <outlet property="counterResetButton" destination="1er-0o-KbP" id="GJy-8l-j05"/>
+                        <outlet property="minusCounterButton" destination="HUS-uJ-vN6" id="WJv-Or-IPn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
