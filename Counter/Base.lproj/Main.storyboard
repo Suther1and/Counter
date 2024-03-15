@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7V0-vh-Cm6">
-                                <rect key="frame" x="184" y="209" width="30.666666666666657" height="60"/>
+                                <rect key="frame" x="181.33333333333334" y="209" width="30.666666666666657" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -63,28 +63,41 @@
                                     <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C0Z-LG-Cyl"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WJM-Wr-AlL">
+                                <rect key="frame" x="75" y="294" width="243" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="5Sy-7Z-YIg"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7V0-vh-Cm6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4MN-5f-qGK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tIk-GV-7Y2" secondAttribute="trailing" constant="35" id="5xd-ej-kbl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7V0-vh-Cm6" secondAttribute="trailing" constant="178.33333333333334" id="A4J-DD-7oA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1er-0o-KbP" secondAttribute="bottom" constant="30" id="EzB-HJ-hJA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1er-0o-KbP" secondAttribute="trailing" constant="150" id="G8p-Zd-OoE"/>
+                            <constraint firstItem="7V0-vh-Cm6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="GrF-c0-QrK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tIk-GV-7Y2" secondAttribute="bottom" constant="90" id="Hvd-J1-iTU"/>
+                            <constraint firstItem="WJM-Wr-AlL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="MMe-va-1w3"/>
                             <constraint firstItem="1er-0o-KbP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="PQy-jT-dIb"/>
-                            <constraint firstItem="7V0-vh-Cm6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XJc-Xl-XGk"/>
+                            <constraint firstItem="WJM-Wr-AlL" firstAttribute="top" secondItem="7V0-vh-Cm6" secondAttribute="bottom" constant="25" id="PTa-qf-NoQ"/>
                             <constraint firstItem="HUS-uJ-vN6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="YSe-wB-6rq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HUS-uJ-vN6" secondAttribute="bottom" constant="90" id="aI6-nF-I5p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tIk-GV-7Y2" secondAttribute="trailing" symbolic="YES" id="qvg-6N-wKh"/>
                             <constraint firstItem="tIk-GV-7Y2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HUS-uJ-vN6" secondAttribute="trailing" constant="8" symbolic="YES" id="w5K-5r-BWE"/>
-                            <constraint firstItem="7V0-vh-Cm6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="wGp-4g-Ylz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJM-Wr-AlL" secondAttribute="trailing" constant="75" id="zd9-fS-fkj"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="counterButton" destination="tIk-GV-7Y2" id="2ck-60-anI"/>
                         <outlet property="counterLabel" destination="7V0-vh-Cm6" id="4d1-Dh-MKy"/>
                         <outlet property="counterResetButton" destination="1er-0o-KbP" id="GJy-8l-j05"/>
+                        <outlet property="counterTextField" destination="WJM-Wr-AlL" id="34E-cB-3MM"/>
                         <outlet property="minusCounterButton" destination="HUS-uJ-vN6" id="WJv-Or-IPn"/>
                     </connections>
                 </viewController>
@@ -94,6 +107,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
