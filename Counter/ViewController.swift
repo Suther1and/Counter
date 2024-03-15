@@ -10,9 +10,8 @@ import Foundation
 
 
 func printDate() -> String {
-    let date = Date()
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "dd.MM HH:mm:ss"
+    dateFormatter.dateFormat = "dd.MM - HH:mm:ss"
     let currentDateString = dateFormatter.string(from: Date())
     return currentDateString
 }
@@ -37,24 +36,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         counterTextField.text = "История изменений"
-        
+        counterLabel.text = "Значение счётчика: \(String(counterValue))"
     
     }
 
     @IBAction func buttonPressed(_ sender: Any) {
         counterValue += 1
-        counterLabel.text = String(counterValue)
+        counterLabel.text = "Значение счётчика: \(String(counterValue))"
         counterTextField.text = "\(printDate()) \nЗначение изменено на +1"
     }
     
     @IBAction func minusButtonPressed(_ sender: Any) {
         if counterValue > 0{
             counterValue -= 1
-            counterLabel.text = String(counterValue)
+            counterLabel.text = "Значение счётчика: \(String(counterValue))"
             counterTextField.text = "\(printDate()) \nЗначение изменено на -1"
         }else{
             counterValue = 0
-            counterLabel.text = String(counterValue)
+            counterLabel.text = "Значение счётчика: \(String(counterValue))"
             counterTextField.text = "\(printDate()) \nПопытка уменьшить значение ниже нуля"
         }
          
@@ -63,7 +62,7 @@ class ViewController: UIViewController {
     
     @IBAction func resetButtonPressed(_ sender: Any) {
         counterValue = 0
-        counterLabel.text = String(counterValue)
+        counterLabel.text = "Значение счётчика: \(String(counterValue))"
         counterTextField.text = "\(printDate()) \nЗначение сброшено"
     }
     
