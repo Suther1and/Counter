@@ -16,6 +16,7 @@ func printDate() -> String {
     return currentDateString
 }
  
+
  
 
 class ViewController: UIViewController {
@@ -31,8 +32,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var counterTextField: UITextView!
     
     var counterValue: Int = 0
-    
-    
+     
+    func scrollToLast() {
+        let range = NSMakeRange(counterTextField.text.count - 1, 0)
+        counterTextField.scrollRangeToVisible(range)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +45,7 @@ class ViewController: UIViewController {
         counterLabel.text = "Значение счётчика: \(String(counterValue))"
         
          
+         
     
     }
 
@@ -48,6 +53,8 @@ class ViewController: UIViewController {
         counterValue += 1
         counterLabel.text = "Значение счётчика: \(String(counterValue))"
         counterTextField.text += "\n\(printDate())   Значение изменено на +1"
+        scrollToLast()
+        
     }
     
     @IBAction func minusButtonPressed(_ sender: Any) {
@@ -55,11 +62,12 @@ class ViewController: UIViewController {
             counterValue -= 1
             counterLabel.text = "Значение счётчика: \(String(counterValue))"
             counterTextField.text += "\n\(printDate())   Значение изменено на -1"
-            
+            scrollToLast()
         }else{
             counterValue = 0
             counterLabel.text = "Значение счётчика: \(String(counterValue))"
             counterTextField.text += "\n\(printDate())   Попытка уменьшить значение ниже нуля"
+            scrollToLast()
         }
          
     }
@@ -69,6 +77,7 @@ class ViewController: UIViewController {
         counterValue = 0
         counterLabel.text = "Значение счётчика: \(String(counterValue))"
         counterTextField.text += "\n\(printDate())   Значение сброшено"
+        scrollToLast()
     }
     
 }
