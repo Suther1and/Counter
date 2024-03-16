@@ -19,9 +19,11 @@ func printDate() -> String {
  
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var counterLabel: UILabel!
     
     @IBOutlet weak var counterButton: UIButton!
+    
     @IBOutlet weak var minusCounterButton: UIButton!
     
     @IBOutlet weak var counterResetButton: UIButton!
@@ -29,32 +31,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var counterTextField: UITextView!
     
     var counterValue: Int = 0
-     
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        counterTextField.text = "История изменений"
+        counterTextField.text = "История изменений:"
         counterLabel.text = "Значение счётчика: \(String(counterValue))"
+        
+         
     
     }
 
     @IBAction func buttonPressed(_ sender: Any) {
         counterValue += 1
         counterLabel.text = "Значение счётчика: \(String(counterValue))"
-        counterTextField.text = "\(printDate()) \nЗначение изменено на +1"
+        counterTextField.text += "\n\(printDate())   Значение изменено на +1"
     }
     
     @IBAction func minusButtonPressed(_ sender: Any) {
         if counterValue > 0{
             counterValue -= 1
             counterLabel.text = "Значение счётчика: \(String(counterValue))"
-            counterTextField.text = "\(printDate()) \nЗначение изменено на -1"
+            counterTextField.text += "\n\(printDate())   Значение изменено на -1"
+            
         }else{
             counterValue = 0
             counterLabel.text = "Значение счётчика: \(String(counterValue))"
-            counterTextField.text = "\(printDate()) \nПопытка уменьшить значение ниже нуля"
+            counterTextField.text += "\n\(printDate())   Попытка уменьшить значение ниже нуля"
         }
          
     }
@@ -63,7 +68,7 @@ class ViewController: UIViewController {
     @IBAction func resetButtonPressed(_ sender: Any) {
         counterValue = 0
         counterLabel.text = "Значение счётчика: \(String(counterValue))"
-        counterTextField.text = "\(printDate()) \nЗначение сброшено"
+        counterTextField.text += "\n\(printDate())   Значение сброшено"
     }
     
 }
