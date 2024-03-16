@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJM-Wr-AlL">
-                                <rect key="frame" x="14" y="362" width="363" height="128"/>
+                                <rect key="frame" x="14" y="372" width="363" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="5Sy-7Z-YIg"/>
@@ -76,12 +76,20 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iw3-GH-CHT">
                                 <rect key="frame" x="123" y="65" width="147" height="151"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="История изменений:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYT-nG-7CL">
+                                <rect key="frame" x="16" y="333" width="166" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7V0-vh-Cm6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4MN-5f-qGK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tIk-GV-7Y2" secondAttribute="trailing" constant="35" id="5xd-ej-kbl"/>
+                            <constraint firstItem="QYT-nG-7CL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7LY-vb-PlZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QYT-nG-7CL" secondAttribute="trailing" symbolic="YES" id="EL4-UV-PtD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1er-0o-KbP" secondAttribute="bottom" constant="30" id="EzB-HJ-hJA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1er-0o-KbP" secondAttribute="trailing" constant="150" id="G8p-Zd-OoE"/>
                             <constraint firstItem="7V0-vh-Cm6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="207" id="GrF-c0-QrK"/>
@@ -89,11 +97,12 @@
                             <constraint firstItem="iw3-GH-CHT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="IF5-vO-0bF"/>
                             <constraint firstItem="WJM-Wr-AlL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="MMe-va-1w3"/>
                             <constraint firstItem="1er-0o-KbP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="PQy-jT-dIb"/>
-                            <constraint firstItem="WJM-Wr-AlL" firstAttribute="top" secondItem="7V0-vh-Cm6" secondAttribute="bottom" constant="60" id="PTa-qf-NoQ"/>
+                            <constraint firstItem="WJM-Wr-AlL" firstAttribute="top" secondItem="7V0-vh-Cm6" secondAttribute="bottom" constant="70" id="PTa-qf-NoQ"/>
                             <constraint firstItem="7V0-vh-Cm6" firstAttribute="top" secondItem="iw3-GH-CHT" secondAttribute="bottom" constant="50" id="WHj-6i-CgA"/>
                             <constraint firstItem="HUS-uJ-vN6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="YSe-wB-6rq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HUS-uJ-vN6" secondAttribute="bottom" constant="90" id="aI6-nF-I5p"/>
                             <constraint firstItem="iw3-GH-CHT" firstAttribute="centerX" secondItem="7V0-vh-Cm6" secondAttribute="centerX" id="eSO-UF-szK"/>
+                            <constraint firstItem="WJM-Wr-AlL" firstAttribute="top" secondItem="QYT-nG-7CL" secondAttribute="bottom" constant="18" id="iTU-Ui-gh0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tIk-GV-7Y2" secondAttribute="trailing" symbolic="YES" id="qvg-6N-wKh"/>
                             <constraint firstItem="iw3-GH-CHT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="vhQ-em-Gfj"/>
                             <constraint firstItem="tIk-GV-7Y2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HUS-uJ-vN6" secondAttribute="trailing" constant="8" symbolic="YES" id="w5K-5r-BWE"/>

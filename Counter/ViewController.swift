@@ -42,7 +42,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        counterTextField.text = "История изменений:"
         counterLabel.text = "Значение счётчика: \(String(counterValue))"
         practicumImageView.layer.cornerRadius = 30
          
