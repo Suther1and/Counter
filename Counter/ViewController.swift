@@ -20,6 +20,7 @@ func printDate() -> String {
  
 
 class ViewController: UIViewController {
+    @IBOutlet weak var practicumImageView: UIImageView!
     
     @IBOutlet weak var counterLabel: UILabel!
     
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
         
         counterTextField.text = "История изменений:"
         counterLabel.text = "Значение счётчика: \(String(counterValue))"
-        
+        practicumImageView.layer.cornerRadius = 30
          
          
     
